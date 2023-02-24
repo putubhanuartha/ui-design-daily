@@ -3,10 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	td {
+		@apply text-sm py-2 font-medium;
+	}
+	th {
+		@apply text-sm text-start py-2  font-normal text-gray-500;
+	}
+}
+
 html {
 	font-family: "Poppins";
 }
 
 figure {
 	@apply flex items-center;
+}
+td button {
+	@apply border-[1px] py-2 px-2 rounded-lg border-gray-400;
+}
+
+tbody tr {
+	@apply hover:shadow-lg transition-shadow duration-300;
 }
