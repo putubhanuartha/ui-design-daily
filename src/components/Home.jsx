@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-export default function Home() {
+export default function Home(props) {
+	useEffect(() => {
+		document.title = `${props.title}`;
+	}, []);
 	return (
 		<div className="m-auto w-full max-w-lg bg-baseCardBackground rounded-lg p-8 shadow-lg">
 			<h1 className="text-2xl text-center">Homepage</h1>

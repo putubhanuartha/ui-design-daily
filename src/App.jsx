@@ -8,8 +8,11 @@ export default function App() {
 			path: "/",
 			element: <Navigation />,
 			children: [
-				{ path: "/day-1585", element: <Day_1585 /> },
-				{ path: "/", element: <Home /> },
+				{
+					path: "/day-1585",
+					element: <Day_1585 title="UI Design Daily | day 1585" />,
+				},
+				{ path: "/", element: <Home title="UI Design Daily | Home" /> },
 			],
 		},
 	]);

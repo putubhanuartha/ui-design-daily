@@ -1,8 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoLogOutOutline } from "react-icons/io5";
-export default function Day_1585() {
+export default function Day_1585(props) {
 	const [index, setIndex] = useState(-1);
+	useEffect(() => {
+		document.title = `${props.title}`;
+	}, []);
 	return (
 		<div className="text-xl container m-auto max-w-6xl w-full bg-baseCardBackground flex rounded-lg overflow-clip">
 			<div className="pt-11 pb-9 w-[20%] bg-sidebarBackground px-7 flex flex-col items-start justify-between">
